@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onKeyPressed="#keyBoardEvent" prefHeight="507.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox layoutY="200.0" prefHeight="337.0" prefWidth="500.0">
+         <children>
+            <HBox prefHeight="85.0" prefWidth="500.0">
+               <children>
+                  <Button fx:id="btnHiahiahia" mnemonicParsing="false" onAction="#btnHiahiahiaEvent" prefHeight="100.0" prefWidth="100.0" text="ヾ(•ω•`)o">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLeftBracket" mnemonicParsing="false" onAction="#btnLeftBracketEvent" prefHeight="100.0" prefWidth="100.0" text="(">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRightBracket" mnemonicParsing="false" onAction="#btnRightBracketEvent" prefHeight="100.0" prefWidth="100.0" text=")">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSP" mnemonicParsing="false" onAction="#btnSPEvent" prefHeight="67.0" prefWidth="200.0" text="Backspace">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="85.0" prefWidth="500.0">
+               <children>
+                  <Button fx:id="btnSimp" mnemonicParsing="false" onAction="#btnSimpEvent" prefHeight="100.0" prefWidth="100.0" text="simp">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+                  <Button fx:id="btnSeven" mnemonicParsing="false" onAction="#btnSevenEvent" prefHeight="100.0" prefWidth="100.0" text="7">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnEight" mnemonicParsing="false" onAction="#btnEightEvent" prefHeight="100.0" prefWidth="100.0" text="8">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnNine" mnemonicParsing="false" onAction="#btnNineEvent" prefHeight="85.0" prefWidth="100.0" text="9">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnPower" mnemonicParsing="false" onAction="#btnPowerEvent" prefHeight="100.0" prefWidth="100.0" text="^">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+               </children></HBox>
+            <HBox prefHeight="85.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnValue" mnemonicParsing="false" onAction="#btnValueEvent" prefHeight="100.0" prefWidth="100.0" text="f(x)">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnFour" mnemonicParsing="false" onAction="#btnFourEvent" prefHeight="100.0" prefWidth="100.0" text="4">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnFive" mnemonicParsing="false" onAction="#btnFiveEvent" prefHeight="100.0" prefWidth="100.0" text="5">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnSix" mnemonicParsing="false" onAction="#btnSixEvent" prefHeight="100.0" prefWidth="100.0" text="6">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnMinus" mnemonicParsing="false" onAction="#btnMinusEvent" prefHeight="100.0" prefWidth="100.0" text="-">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+               </children></HBox>
+            <HBox prefHeight="85.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnDrivation" mnemonicParsing="false" onAction="#btnDerivationEvent" prefHeight="100.0" prefWidth="100.0" text="f'(x)">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnOne" mnemonicParsing="false" onAction="#btnOneEvent" prefHeight="100.0" prefWidth="100.0" text="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnTwo" mnemonicParsing="false" onAction="#btnTwoEvent" prefHeight="100.0" prefWidth="100.0" text="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnThree" mnemonicParsing="false" onAction="#btnThreeEvent" prefHeight="100.0" prefWidth="100.0" text="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnPlus" mnemonicParsing="false" onAction="#btnPlusEvent" prefHeight="100.0" prefWidth="100.0" text="+">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+               </children></HBox>
+            <HBox prefHeight="85.0" prefWidth="500.0">
+               <children>
+                  <Button fx:id="btnX" mnemonicParsing="false" onAction="#btnXEvent" prefHeight="100.0" prefWidth="100.0" text="X">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnPOM" mnemonicParsing="false" onAction="#btnPOMEvent" prefHeight="100.0" prefWidth="100.0" text="+/-">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnZero" mnemonicParsing="false" onAction="#btnZeroEvent" prefHeight="100.0" prefWidth="100.0" text="0">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnPoint" mnemonicParsing="false" onAction="#btnPointEvent" prefHeight="109.0" prefWidth="100.0" text=".">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnEqual" mnemonicParsing="false" onAction="#btnEqualEvent" prefHeight="100.0" prefWidth="100.0" text="=">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children></VBox>
+      <VBox prefHeight="200.0" prefWidth="500.0">
+         <children>
+            <HBox prefHeight="83.0" prefWidth="500.0">
+               <children>
+                  <VBox prefHeight="78.0" prefWidth="77.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <RadioButton fx:id="rbtnPolynomial" mnemonicParsing="false" onAction="#rbtnPolynomialEvent" prefHeight="45.0" prefWidth="100.0" selected="true" text="多项式">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="rbtnGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbtnValue" mnemonicParsing="false" onAction="#rbtnValueEvent" prefHeight="45.0" prefWidth="106.0" text="求值" toggleGroup="$rbtnGroup">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="rbtnDrivation" mnemonicParsing="false" onAction="#rbtnDrivationEvent" prefHeight="45.0" prefWidth="100.0" text="求导" toggleGroup="$rbtnGroup">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <TextField fx:id="TfResult" alignment="CENTER_RIGHT" editable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="62.0" prefWidth="394.0" promptText="结果输出" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="114.0" prefWidth="500.0">
+               <children>
+                  <TextArea fx:id="taOperation" editable="false" prefHeight="105.0" prefWidth="500.0" promptText="请输入计算式" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
