@@ -1,0 +1,219 @@
+{{template "../public/page_header.html" .}}
+
+<!-- start banner_x -->
+<div class="banner_x center">
+    <a href="/">
+        <div class="logo fl"><img src="/static/frontend/image/logo_top.png"></div>
+    </a>
+    <a href="">
+        <div class="ad_top fl"></div>
+    </a>
+    <div class="nav fl">
+        <ul class="clearfix" id="nav_list">
+        {{range $key,$value := .middleMenuList}}
+            <li>
+                <a href="{{$value.Link}}" target="_blank">{{$value.Title}}</a>
+                <ol class="children-list clearfix">
+                {{range $k,$v := $value.ProductItem}}
+                    <li>
+                        <a href="item_{{$v.Id}}.html" style="width: 120px;">
+                            <img src="{{$v.ProductImg | formatImage}}" alt="{{$v.Title}}"/>
+                            <!-- <p>{{$v.Title}}</p> -->
+                            <p style="float: left;width: 100%;">
+                                <span style="display: block;">{{$v.Title}}</span>
+                                <span style="display: block;">{{$v.Price}}元</span>
+                            </p>
+                        </a>
+                    </li>
+                {{end}}
+                </ol>
+            </li>
+        {{end}}
+        </ul>
+    </div>
+    <div class="search fr">
+        <form action="/search/productList" method="get">
+            <div class="text fl">
+                <input type="text" class="shuru" value="{{.keyword}}" id="keyword" name="keyword"
+                       placeholder="请输入您需要的商品">
+            </div>
+            <div class="submit fl">
+                <input type="submit" class="search" value="搜索"/>
+            </div>
+            <div class="clear"></div>
+        </form>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- end banner_x -->
+<!-- start banner_y -->
+<div class="banner_y center">
+    <div class="nav">
+        <ul>
+        {{range $key,$value := .productCateList}}
+            <li>
+            {{if eq $value.Link ""}}
+                <a href="category_{{$value.Id}}.html" target="_blank">{{$value.Title}}</a>
+            {{else}}
+                <a href="{{$value.Link}}" target="_blank">{{$value.Title}}</a>
+            {{end}}
+                <div class="pop">
+                    <ol class="cate_list clear">
+                    {{range $k,$v := $value.ProductCateItem}}
+                        <li>
+                            <div class="choosebuy_left">
+                            {{if eq $v.Link ""}}
+                                <a href="category_{{$v.Id}}.html" target="_blank" class="clearfix">
+                                    <div class="img fl"><img src="{{$v.CateImg | formatImage}}" alt="{{$v.Title}}">
+                                    </div>
+                                    <span class="fl">{{$v.Title}}</span>
+                                </a>
+                            {{else}}
+                                <a href="{{$v.Link}}" target="_blank" class="clearfix">
+                                    <div class="img fl"><img src="{{$v.CateImg | formatImage}}" alt="{{$v.Title}}">
+                                    </div>
+                                    <span class="fl">{{$v.Title}}</span>
+                                </a>
+                            {{end}}
+                            </div>
+                        </li>
+                    {{end}}
+                    </ol>
+                </div>
+            </li>
+        {{end}}
+        </ul>
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        {{range $key,$value := .bannerList}}
+            <div class="swiper-slide">
+                <a href="{{$value.Link}}" target="_blank">
+                    <img src="{{$value.BannerImg | formatImage}}" alt="{{$value.Title}}"/>
+                </a>
+            </div>
+        {{end}}
+        </div>
+        <!-- 左右箭头 -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+
+<div class="sub_banner center">
+    <div class="sidebar fl">
+        <div class="fl"><a href=""><img src="./static/frontend/image/hjh_01.gif"></a></div>
+        <div class="fl"><a href=""><img src="./static/frontend/image/hjh_02.gif"></a></div>
+        <div class="fl"><a href=""><img src="./static/frontend/image/hjh_03.gif"></a></div>
+        <div class="fl"><a href=""><img src="./static/frontend/image/hjh_04.gif"></a></div>
+        <div class="fl"><a href=""><img src="./static/frontend/image/hjh_05.gif"></a></div>
+        <div class="fl"><a href=""><img src="./static/frontend/image/hjh_06.gif"></a></div>
+        <div class="clear"></div>
+    </div>
+    <div class="bigpic fl"><a href=""><img src="./static/frontend/image/note11.jpg" alt=""></a></div>
+    <div class="bigpic fl"><a href=""><img
+            src="./static/frontend/image/miwatch.jpg" alt=""></a></div>
+    <div class="bigpic fr"><a href=""><img src="./static/frontend/image/pinghengche.jpg" alt=""></a></div>
+    <div class="clear"></div>
+</div>
+<!-- end banner -->
+
+<!-- start 单品 -->
+<div class="singleproduct center">
+    <div class="title center">FayMall商城热门单品</div>
+    <div class="main center">
+        <div class="star fl">
+            <div class="sub_star"><a href=""><img src="./static/frontend/image/brand1.png" alt=""></a></div>
+            <div class="brand"><a href="">小米MIX Alpha</a></div>
+            <div class="discount">6月9日-20日享花呗12期分期免息</div>
+            <div class="product">3499元起</div>
+        </div>
+        <div class="star fl">
+            <div class="sub_star"><a href=""><img src="./static/frontend/image/mi1.png" alt=""></a></div>
+            <div class="brand"><a href="">Redmi 11T</a></div>
+            <div class="discount">6月9日-20日，下单立减200元</div>
+            <div class="product">1599元</div>
+        </div>
+        <div class="star fl">
+            <div class="sub_star"><a href=""><img src="./static/frontend/image/m2.png" alt=""></a></div>
+            <div class="brand"><a href="">Redmi K50 至尊纪念版B</a></div>
+            <div class="discount">6月18日，下单立减100元</div>
+            <div class="product">4599元</div>
+        </div>
+        <div class="star fl">
+            <div class="sub_star"><a href=""><img src="./static/frontend/image/dianshi.png" alt=""></a></div>
+            <div class="brand"><a href="">小米电视4s 55英寸</a></div>
+            <div class="discount">6月18日，下单立减200元</div>
+            <div class="product">5999元</div>
+        </div>
+        <div class="star fl">
+            <div class="sub_star"><a href=""><img src="./static/frontend/image/product5.png" alt=""></a></div>
+            <div class="brand"><a href="">小米笔记本G11</a></div>
+            <div class="discount">性能吊打友商的性价比游戏本</div>
+            <div class="product">5899元起</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- 手机 -->
+
+<div class="category_item w">
+    <div class="title center">手机</div>
+    <div class="main center">
+        <div class="category_item_left">
+            <img src="static/frontend/image/shouji.jpg" alt="手机">
+        </div>
+        <div class="category_item_right">
+        {{range $key,$value := .phoneList}}
+            <div class="hot fl">
+                <div class="newproduct"><span style="background:#fff"></span></div>
+                <div class="tu"><a href="item_{{$value.Id}}.html"><img src="{{$value.ProductImg | formatImage}}"></a>
+                </div>
+                <div class="secondkill"><a href="">{{$value.Title}}</a></div>
+                <div class="product">{{$value.Price}}元</div>
+                <div class="comment">372人评价</div>
+                <div class="floatitem">
+                    <a href="">
+                        <span>{{substr $value.SubTitle 0 20}}</span>
+
+                    </a>
+                </div>
+            </div>
+        {{end}}
+        </div>
+    </div>
+</div>
+
+<!-- 电视 -->
+<div class="category_item w">
+    <div class="title center">电脑</div>
+    <div class="main center">
+        <div class="category_item_left">
+            <img src="static/frontend/image/pc.png" alt="手机">
+        </div>
+        <div class="category_item_right">
+            {{range $key,$value := .tvList}}
+            <div class="hot fl">
+                <div class="newproduct"><span style="background:#fff"></span></div>
+                <div class="tu"><a href="item_{{$value.Id}}.html"><img src="{{$value.ProductImg | formatImage}}"></a>
+                </div>
+                <div class="secondkill"><a href="">{{$value.Title}}</a></div>
+                <div class="product">{{$value.Price}}元</div>
+                <div class="comment">372人评价</div>
+                <div class="floatitem">
+                    <a href="">
+                        <span>{{$value.SubTitle}}</span>
+                    </a>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>
+
+{{template "../public/page_footer.html" .}}
+</body>
+
+</html>
